@@ -4,15 +4,7 @@ services:
     build: .
     ports:
       - "8080:8080"
-    depends_on:
-      - mysql
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/lanchonete
       SPRING_DATASOURCE_USERNAME: lanchonete
       SPRING_DATASOURCE_PASSWORD: 123456
-
-  mysql:
-    image: mysql:latest
-    environment:
-      MYSQL_ROOT_PASSWORD: lanchoneteAdmin
-      MYSQL_DATABASE: 123456
